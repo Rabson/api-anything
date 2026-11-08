@@ -26,4 +26,4 @@ fs.writeFileSync(f, JSON.stringify(p, null, 2) + "\n");
 console.log(`publishing ${p.name}@${p.version}`);' "$work/package/package.json" "$n"
 printf '%s\n' '@haatlabs:registry=https://npm.pkg.github.com' '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' > "$work/package/.npmrc"
 cd "$work/package"
-npm publish --ignore-scripts
+npm publish --ignore-scripts --tag haatlabs
