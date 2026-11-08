@@ -20,7 +20,7 @@ const p = JSON.parse(fs.readFileSync(f, "utf8"));
 p.name = "@haatlabs/api-anything";
 p.version = `${p.version}-haatlabs.${n}`;
 p.publishConfig = { registry: "https://npm.pkg.github.com" };
-p.repository = { type: "git", url: "git+https://github.com/Haatlabs/api-anything.git" };
+p.repository = { type: "git", url: "git+https://github.com/Rabson/api-anything.git" };
 delete p.scripts.prepare; delete p.scripts.prepublishOnly;
 fs.writeFileSync(f, JSON.stringify(p, null, 2) + "\n");
 console.log(`publishing ${p.name}@${p.version}`);' "$work/package/package.json" "$n"
